@@ -1,0 +1,95 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dP:/7
+Eadder
+Z0 w1788350899
+Z1 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z2 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z3 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 1
+Z4 dP:/7/sim
+Z5 8../vhd/adder.vhd
+Z6 F../vhd/adder.vhd
+l0
+L7 1
+VQz2MZ=3SC]?8:0[O<;iJB2
+!s100 82h7Vc`<YC;oF7CP2TeDW3
+Z7 OP;C;2022.3;75
+32
+Z8 !s110 1788350905
+!i10b 1
+Z9 !s108 1788350905.000000
+Z10 !s90 -reportprogress|300|-check_synthesis|../vhd/adder.vhd|
+Z11 !s107 ../vhd/adder.vhd|
+!i113 1
+Z12 o-check_synthesis
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+DEx4 work 5 adder 0 22 Qz2MZ=3SC]?8:0[O<;iJB2
+!i122 1
+l26
+L23 17
+VWmAOB<?RXA]Jk`oJbmIV30
+!s100 nNc:zUf5I56<z0f^j4Z_>1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etb_adder
+Z14 w1788349821
+R1
+R2
+R3
+!i122 2
+R4
+Z15 8../tb/tb_adder.vhd
+Z16 F../tb/tb_adder.vhd
+l0
+L25 1
+VId7:DR^_3Poc]<m4QikOV2
+!s100 GV8KA<:ca`oE5Kb=faGnj1
+R7
+32
+Z17 !s110 1788350952
+!i10b 1
+Z18 !s108 1788350952.000000
+Z19 !s90 -reportprogress|300|../tb/tb_adder.vhd|
+!s107 ../tb/tb_adder.vhd|
+!i113 1
+R13
+Atestbench
+R1
+R2
+R3
+DEx4 work 8 tb_adder 0 22 Id7:DR^_3Poc]<m4QikOV2
+!i122 2
+l70
+L29 117
+VZ5a22BQAbL01`ojGO<2PA0
+!s100 >EHHGB<RIcJMK1DbMjbQP3
+R7
+32
+R17
+!i10b 1
+R18
+R19
+Z20 !s107 ../tb/tb_adder.vhd|
+!i113 1
+R13

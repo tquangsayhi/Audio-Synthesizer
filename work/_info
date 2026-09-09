@@ -10,68 +10,107 @@ z2
 cModel Technology
 dP:/7
 Eadder
-Z0 w1788350899
+Z0 w1788351292
 Z1 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
 Z2 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
 Z3 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
-!i122 1
+!i122 7
 Z4 dP:/7/sim
 Z5 8../vhd/adder.vhd
 Z6 F../vhd/adder.vhd
 l0
-L7 1
-VQz2MZ=3SC]?8:0[O<;iJB2
-!s100 82h7Vc`<YC;oF7CP2TeDW3
-Z7 OP;C;2022.3;75
+Z7 L25 1
+VEU197G`7X445<Ad1UXkdB0
+!s100 eF6VBHn`n=lTXIbH[ThMj2
+Z8 OP;C;2022.3;75
 32
-Z8 !s110 1788350905
+Z9 !s110 1788949480
 !i10b 1
-Z9 !s108 1788350905.000000
-Z10 !s90 -reportprogress|300|-check_synthesis|../vhd/adder.vhd|
-Z11 !s107 ../vhd/adder.vhd|
+Z10 !s108 1788949480.000000
+Z11 !s90 -reportprogress|300|../vhd/adder.vhd|
+Z12 !s107 ../vhd/adder.vhd|
 !i113 1
-Z12 o-check_synthesis
 Z13 tExplicit 1 CvgOpt 0
 Artl
 R1
 R2
 R3
-DEx4 work 5 adder 0 22 Qz2MZ=3SC]?8:0[O<;iJB2
-!i122 1
-l26
-L23 17
-VWmAOB<?RXA]Jk`oJbmIV30
-!s100 nNc:zUf5I56<z0f^j4Z_>1
-R7
-32
+DEx4 work 5 adder 0 22 EU197G`7X445<Ad1UXkdB0
+!i122 7
+l44
+L41 17
+V2`_gN?N_<NGN5DXX3nQc40
+!s100 j7fYgGbP=[6X:V?4^G3P<0
 R8
-!i10b 1
+32
 R9
+!i10b 1
 R10
 R11
-!i113 1
 R12
+!i113 1
+R13
+Emulti_port_adder
+Z14 w1788522778
+R2
+R3
+!i122 3
+R4
+Z15 8../vhd/multi_port_adder.vhd
+Z16 F../vhd/multi_port_adder.vhd
+l0
+L24 1
+V9H6Y8NRSfi^X]1b0F`zHo0
+!s100 kmVKXX3g1V7_TW1i<P:m70
+R8
+32
+Z17 !s110 1788949280
+!i10b 1
+Z18 !s108 1788949279.000000
+Z19 !s90 -reportprogress|300|-check_synthesis|../vhd/multi_port_adder.vhd|
+Z20 !s107 ../vhd/multi_port_adder.vhd|
+!i113 1
+Z21 o-check_synthesis
+R13
+Astructural
+R2
+R3
+DEx4 work 16 multi_port_adder 0 22 9H6Y8NRSfi^X]1b0F`zHo0
+!i122 3
+l58
+L38 60
+V^2SE>Oz3>SV1bn6dE=@l]0
+!s100 [^57lYUHVZSSiK_WCVcK`3
+R8
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R21
 R13
 Etb_adder
-Z14 w1788349821
+Z22 w1788349821
 R1
 R2
 R3
 !i122 2
 R4
-Z15 8../tb/tb_adder.vhd
-Z16 F../tb/tb_adder.vhd
+Z23 8../tb/tb_adder.vhd
+Z24 F../tb/tb_adder.vhd
 l0
-L25 1
+R7
 VId7:DR^_3Poc]<m4QikOV2
 !s100 GV8KA<:ca`oE5Kb=faGnj1
-R7
+R8
 32
-Z17 !s110 1788350952
+Z25 !s110 1788350952
 !i10b 1
-Z18 !s108 1788350952.000000
-Z19 !s90 -reportprogress|300|../tb/tb_adder.vhd|
-!s107 ../tb/tb_adder.vhd|
+Z26 !s108 1788350952.000000
+Z27 !s90 -reportprogress|300|../tb/tb_adder.vhd|
+Z28 !s107 ../tb/tb_adder.vhd|
 !i113 1
 R13
 Atestbench
@@ -84,12 +123,95 @@ l70
 L29 117
 VZ5a22BQAbL01`ojGO<2PA0
 !s100 >EHHGB<RIcJMK1DbMjbQP3
-R7
+R8
 32
-R17
+R25
 !i10b 1
-R18
-R19
-Z20 !s107 ../tb/tb_adder.vhd|
+R26
+R27
+R28
+!i113 1
+R13
+Etb_multi_port_adder
+Z29 w1788949372
+Z30 DPx4 work 9 txtio_pkg 0 22 1M318`7S@aSe8]ecmlFfZ2
+R1
+R2
+R3
+!i122 6
+R4
+Z31 8../tb/tb_multi_port_adder.vhd
+Z32 F../tb/tb_multi_port_adder.vhd
+l0
+L6 1
+V?LE_6AXc8LA<jXN<2`ol<0
+!s100 6Te?4?Aek>N[7:^HcmM7o2
+R8
+32
+Z33 !s110 1788949378
+!i10b 1
+Z34 !s108 1788949378.000000
+Z35 !s90 -reportprogress|300|../tb/tb_multi_port_adder.vhd|
+Z36 !s107 ../tb/tb_multi_port_adder.vhd|
+!i113 1
+R13
+Atestbench
+R30
+R1
+R2
+R3
+DEx4 work 19 tb_multi_port_adder 0 22 ?LE_6AXc8LA<jXN<2`ol<0
+!i122 6
+l54
+L13 109
+VDdS_@1`3I_G]_n_CNQo9d0
+!s100 Z8nR9`Kh[]TUhnOejR_An3
+R8
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R13
+Ptxtio_pkg
+R2
+R3
+!i122 4
+Z37 w1788522953
+R4
+Z38 8../tb/txtio_pkg.vhd
+Z39 F../tb/txtio_pkg.vhd
+l0
+L32 18
+V1M318`7S@aSe8]ecmlFfZ2
+!s100 2zPl]9S4L:>hhDQVE9j4Q2
+R8
+32
+b1
+Z40 !s110 1788949312
+!i10b 1
+Z41 !s108 1788949311.000000
+Z42 !s90 -reportprogress|300|../tb/txtio_pkg.vhd|
+Z43 !s107 ../tb/txtio_pkg.vhd|
+!i113 1
+R13
+Bbody
+R30
+R2
+R3
+!i122 4
+l0
+L53 129
+V_lcmK6eRbK51ScIZccck]0
+!s100 cY1SzJU^0aC`2H?TmJSOD2
+R8
+32
+R40
+!i10b 1
+R41
+R42
+R43
 !i113 1
 R13

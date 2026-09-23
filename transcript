@@ -1,99 +1,19 @@
-ls
-# E01
-# E02
-# E04
-# E05
-# README.md
-# doc
-# sim
-# syn
-# tb
-# transcript
-# verilog
-# vhd
-# work
-# xdc
 cd sim
 # reading modelsim.ini
-vcom -check_synthesis ../vhd/audio_codec_model.vhd
+vcom -check_synthesis ../vhd/multi_port_adder.vhd
 # Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 14:29:27 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_codec_model.vhd 
+# Start time: 13:12:00 on Sep 23,2026
+# vcom -reportprogress 300 -check_synthesis ../vhd/multi_port_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity audio_codec_model
-# -- Compiling architecture behavioral of audio_codec_model
-# ** Error: ../vhd/audio_codec_model.vhd(122): Labels do not match: 'behavioral' and 'rtl'.
-# ** Note: ../vhd/audio_codec_model.vhd(122): VHDL Compiler exiting
-# End time: 14:29:27 on Sep 21,2026, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# C:/Apps/MODELSIM DE-64 2022.3/win64pe/vcom failed.
-vcom -check_synthesis ../vhd/audio_ctrl.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 14:30:06 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_ctrl.vhd 
-# -- Loading package STANDARD
-# ** Error: ../vhd/audio_ctrl.vhd(2): near "Tatu": syntax error
-# ** Note: ../vhd/audio_ctrl.vhd(2): VHDL Compiler exiting
-# End time: 14:30:06 on Sep 21,2026, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# C:/Apps/MODELSIM DE-64 2022.3/win64pe/vcom failed.
-vcom -check_synthesis ../vhd/audio_ctrl.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 14:31:11 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_ctrl.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity audio_ctrl
-# ** Error: ../vhd/audio_ctrl.vhd(35): near "IN": (vcom-1576) expecting ':'.
-# ** Note: ../vhd/audio_ctrl.vhd(35): VHDL Compiler exiting
-# End time: 14:31:12 on Sep 21,2026, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# C:/Apps/MODELSIM DE-64 2022.3/win64pe/vcom failed.
-vcom -check_synthesis ../vhd/audio_ctrl.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 14:32:37 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_ctrl.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity audio_ctrl
-# -- Compiling architecture functionality of audio_ctrl
-# ** Error: ../vhd/audio_ctrl.vhd(81): Enumeration literal '0' is not of type std.STANDARD.INTEGER.
-# ** Note: ../vhd/audio_ctrl.vhd(114): VHDL Compiler exiting
-# End time: 14:32:42 on Sep 21,2026, Elapsed time: 0:00:05
-# Errors: 1, Warnings: 0
-# C:/Apps/MODELSIM DE-64 2022.3/win64pe/vcom failed.
-vcom -check_synthesis ../vhd/audio_ctrl.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 14:33:12 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_ctrl.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity audio_ctrl
-# -- Compiling architecture functionality of audio_ctrl
-# End time: 14:33:13 on Sep 21,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -check_synthesis ../vhd/audio_codec_model.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 14:33:16 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_codec_model.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity audio_codec_model
-# -- Compiling architecture behavioral of audio_codec_model
-# End time: 14:33:16 on Sep 21,2026, Elapsed time: 0:00:00
+# -- Compiling entity multi_port_adder
+# -- Compiling architecture structural of multi_port_adder
+# End time: 13:12:01 on Sep 23,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -check_synthesis ../vhd/wave_gen.vhd
 # Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 14:33:29 on Sep 21,2026
+# Start time: 13:12:07 on Sep 23,2026
 # vcom -reportprogress 300 -check_synthesis ../vhd/wave_gen.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -101,23 +21,59 @@ vcom -check_synthesis ../vhd/wave_gen.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity wave_gen
 # -- Compiling architecture functionality of wave_gen
-# End time: 14:33:29 on Sep 21,2026, Elapsed time: 0:00:00
+# End time: 13:12:07 on Sep 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vcom ../tb/tb_audio_ctrl.vhd
+vcom -check_synthesis ../vhd/audio_ctrl.vhd
 # Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 14:33:49 on Sep 21,2026
-# vcom -reportprogress 300 ../tb/tb_audio_ctrl.vhd 
+# Start time: 13:12:16 on Sep 23,2026
+# vcom -reportprogress 300 -check_synthesis ../vhd/audio_ctrl.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity tb_audio_ctrl
-# -- Compiling architecture testbench of tb_audio_ctrl
-# End time: 14:33:50 on Sep 21,2026, Elapsed time: 0:00:01
+# -- Compiling entity audio_ctrl
+# -- Compiling architecture rtl of audio_ctrl
+# End time: 13:12:16 on Sep 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim tb_audio_ctrl
-# vsim tb_audio_ctrl 
-# Start time: 14:34:18 on Sep 21,2026
+vcom -check_synthesis ../vhd/audio_codec_model.vhd
+# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 13:13:37 on Sep 23,2026
+# vcom -reportprogress 300 -check_synthesis ../vhd/audio_codec_model.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity audio_codec_model
+# -- Compiling architecture behavioral of audio_codec_model
+# End time: 13:13:43 on Sep 23,2026, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
+vcom -check_synthesis ../vhd/synthesizer.vhd
+# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 13:13:52 on Sep 23,2026
+# vcom -reportprogress 300 -check_synthesis ../vhd/synthesizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synthesizer
+# -- Compiling architecture structural of synthesizer
+# End time: 13:13:53 on Sep 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom ../tb/tb_synthesizer.vhd
+# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 13:14:20 on Sep 23,2026
+# vcom -reportprogress 300 ../tb/tb_synthesizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_synthesizer
+# -- Compiling architecture structural of tb_synthesizer
+# End time: 13:14:20 on Sep 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsin
+# invalid command name "vsin"
+vsim tb_synthesizer
+# vsim tb_synthesizer 
+# Start time: 13:14:45 on Sep 23,2026
 # //  ModelSim DE-64 2022.3 Jul 18 2022
 # //
 # //  Copyright 1991-2022 Mentor Graphics Corporation
@@ -135,220 +91,30 @@ vsim tb_audio_ctrl
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.tb_audio_ctrl(testbench)
+# Loading work.tb_synthesizer(structural)
+# Loading work.synthesizer(structural)
 # Loading work.wave_gen(functionality)
-# Loading work.audio_ctrl(functionality)
+# Loading work.multi_port_adder(structural)
+# Loading work.adder(rtl)
+# Loading work.audio_ctrl(rtl)
 # Loading work.audio_codec_model(behavioral)
 add wave *
+# Unable to retrieve min/max values for "sim:/tb_synthesizer/value_left_model_tb"
+# Unable to retrieve min/max values for "sim:/tb_synthesizer/value_right_model_tb"
+run 1 ms
 run all
 # Invalid time value: all
-run 1 ms
-# ** Fatal: (vsim-3421) Value 17 is out of range 0 to 16.
-#    Time: 10275 ns  Iteration: 2  Process: /tb_audio_ctrl/codec_inst/fsm File: ../vhd/audio_codec_model.vhd Line: 96
-# Fatal error in Process fsm at ../vhd/audio_codec_model.vhd line 96
-# 
-# HDL call sequence:
-# Stopped at ../vhd/audio_codec_model.vhd 96 Process fsm
-# 
-run 1 ms
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at ../vhd/audio_codec_model.vhd 96 Process fsm
-# 
-run 1 ms
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at ../vhd/audio_codec_model.vhd 96 Process fsm
-# 
+run -all
+run -all
+restart -f
+run 10 ms
+1 s
+# invalid command name "1"
+run 1s
+# Invalid time value: 1s
 run 1 s
 # Invalid time value: 1 s
-run 10ms
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at ../vhd/audio_codec_model.vhd 96 Process fsm
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at ../vhd/audio_codec_model.vhd 96 Process fsm
-# 
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-run -all
-# ** Fatal: (vsim-3421) Value 17 is out of range 0 to 16.
-#    Time: 10275 ns  Iteration: 2  Process: /tb_audio_ctrl/codec_inst/fsm File: ../vhd/audio_codec_model.vhd Line: 96
-# Fatal error in Process fsm at ../vhd/audio_codec_model.vhd line 96
-# 
-# HDL call sequence:
-# Stopped at ../vhd/audio_codec_model.vhd 96 Process fsm
-# 
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-vcom -check_synthesis ../vhd/audio_codec_model.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 14:54:43 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_codec_model.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity audio_codec_model
-# -- Compiling architecture behavioral of audio_codec_model
-# End time: 14:54:44 on Sep 21,2026, Elapsed time: 0:00:01
+run 100 ms
+run 1000 ms
+# End time: 13:28:15 on Sep 23,2026, Elapsed time: 0:13:30
 # Errors: 0, Warnings: 0
-vsim tb_audio_ctrl
-# End time: 14:54:55 on Sep 21,2026, Elapsed time: 0:20:37
-# Errors: 0, Warnings: 0
-# vsim tb_audio_ctrl 
-# Start time: 14:54:55 on Sep 21,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.tb_audio_ctrl(testbench)
-# Loading work.wave_gen(functionality)
-# Loading work.audio_ctrl(functionality)
-# Loading work.audio_codec_model(behavioral)
-add wave *
-run -all
-stop
-restart -f
-run 10 ms
-run
-run
-run
-run
-run
-run -all
-vcom -check_synthesis ../vhd/audio_codec_model.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 15:12:37 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_codec_model.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity audio_codec_model
-# -- Compiling architecture behavioral of audio_codec_model
-# End time: 15:12:40 on Sep 21,2026, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 0
-restart -f
-# Loading work.audio_codec_model(behavioral)
-# Cannot open WLF file: "vsim.wlf"
-#           Permission denied.
-#           Attempting to use alternate WLF file "./wlftxi7iy7".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftxi7iy7
-run 10 ms
-vcom -check_synthesis ../vhd/audio_codec_model.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 15:26:51 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_codec_model.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity audio_codec_model
-# -- Compiling architecture behavioral of audio_codec_model
-# End time: 15:27:00 on Sep 21,2026, Elapsed time: 0:00:09
-# Errors: 0, Warnings: 0
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.audio_codec_model(behavioral)
-run 10 ms
-vcom ../tb/tb_audio_ctrl.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 15:28:59 on Sep 21,2026
-# vcom -reportprogress 300 ../tb/tb_audio_ctrl.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity tb_audio_ctrl
-# -- Compiling architecture testbench of tb_audio_ctrl
-# End time: 15:29:00 on Sep 21,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-restart -f
-# Loading work.tb_audio_ctrl(testbench)
-run 2 ms
-vcom -check_synthesis ../vhd/audio_ctrl.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 15:34:08 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_ctrl.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity audio_ctrl
-# -- Compiling architecture functionality of audio_ctrl
-# End time: 15:34:15 on Sep 21,2026, Elapsed time: 0:00:07
-# Errors: 0, Warnings: 0
-restart -f
-# Loading work.audio_ctrl(functionality)
-run 1 ms
-restart -f
-vsim tb_audio_ctrl
-# End time: 15:35:08 on Sep 21,2026, Elapsed time: 0:40:13
-# Errors: 0, Warnings: 0
-# vsim tb_audio_ctrl 
-# Start time: 15:35:08 on Sep 21,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.tb_audio_ctrl(testbench)
-# Loading work.wave_gen(functionality)
-# Loading work.audio_ctrl(functionality)
-# Loading work.audio_codec_model(behavioral)
-vcom -check_synthesis ../vhd/audio_codec_model.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 15:35:21 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_codec_model.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity audio_codec_model
-# -- Compiling architecture behavioral of audio_codec_model
-# End time: 15:35:21 on Sep 21,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -check_synthesis ../vhd/audio_ctrl.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 15:35:25 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_ctrl.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity audio_ctrl
-# -- Compiling architecture functionality of audio_ctrl
-# End time: 15:35:26 on Sep 21,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-add wave *
-run 1ms
-run 2ms
-restart -f
-# Loading work.audio_ctrl(functionality)
-# Loading work.audio_codec_model(behavioral)
-run 3 ms
-vcom -check_synthesis ../vhd/audio_ctrl.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 15:47:45 on Sep 21,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_ctrl.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity audio_ctrl
-# -- Compiling architecture rtl of audio_ctrl
-# End time: 15:47:50 on Sep 21,2026, Elapsed time: 0:00:05
-# Errors: 0, Warnings: 0
-restart -f
-# Loading work.audio_ctrl(rtl)
-# Cannot open WLF file: "vsim.wlf"
-#           Permission denied.
-#           Attempting to use alternate WLF file "./wlftwqah1a".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftwqah1a
-run 3 ms
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-run 1ms
-run 1ms
-run 2ms

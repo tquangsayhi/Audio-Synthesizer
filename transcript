@@ -1,31 +1,19 @@
 cd sim
 # reading modelsim.ini
-vcom -check_synthesis ../vhd/multi_port_adder.vhd
+vcom -check_synthesis ../vhd/audio_codec_model.vhd
 # Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 13:12:00 on Sep 23,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/multi_port_adder.vhd 
+# Start time: 14:26:45 on Sep 23,2026
+# vcom -reportprogress 300 -check_synthesis ../vhd/audio_codec_model.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity multi_port_adder
-# -- Compiling architecture structural of multi_port_adder
-# End time: 13:12:01 on Sep 23,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -check_synthesis ../vhd/wave_gen.vhd
-# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 13:12:07 on Sep 23,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/wave_gen.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity wave_gen
-# -- Compiling architecture functionality of wave_gen
-# End time: 13:12:07 on Sep 23,2026, Elapsed time: 0:00:00
+# -- Compiling entity audio_codec_model
+# -- Compiling architecture behavioral of audio_codec_model
+# End time: 14:26:46 on Sep 23,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -check_synthesis ../vhd/audio_ctrl.vhd
 # Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 13:12:16 on Sep 23,2026
+# Start time: 14:26:54 on Sep 23,2026
 # vcom -reportprogress 300 -check_synthesis ../vhd/audio_ctrl.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -33,33 +21,45 @@ vcom -check_synthesis ../vhd/audio_ctrl.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity audio_ctrl
 # -- Compiling architecture rtl of audio_ctrl
-# End time: 13:12:16 on Sep 23,2026, Elapsed time: 0:00:00
+# End time: 14:26:55 on Sep 23,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vcom -check_synthesis ../vhd/audio_codec_model.vhd
+vcom -check_synthesis ../vhd/multi_port_adder.vhd
 # Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 13:13:37 on Sep 23,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/audio_codec_model.vhd 
+# Start time: 14:27:01 on Sep 23,2026
+# vcom -reportprogress 300 -check_synthesis ../vhd/multi_port_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity audio_codec_model
-# -- Compiling architecture behavioral of audio_codec_model
-# End time: 13:13:43 on Sep 23,2026, Elapsed time: 0:00:06
+# -- Compiling entity multi_port_adder
+# -- Compiling architecture structural of multi_port_adder
+# End time: 14:27:02 on Sep 23,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -check_synthesis ../vhd/synthesizer.vhd
 # Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 13:13:52 on Sep 23,2026
+# Start time: 14:27:11 on Sep 23,2026
 # vcom -reportprogress 300 -check_synthesis ../vhd/synthesizer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity synthesizer
 # -- Compiling architecture structural of synthesizer
-# End time: 13:13:53 on Sep 23,2026, Elapsed time: 0:00:01
+# End time: 14:27:11 on Sep 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -check_synthesis ../vhd/wave_gen.vhd
+# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 14:27:19 on Sep 23,2026
+# vcom -reportprogress 300 -check_synthesis ../vhd/wave_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity wave_gen
+# -- Compiling architecture functionality of wave_gen
+# End time: 14:27:20 on Sep 23,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom ../tb/tb_synthesizer.vhd
 # Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 13:14:20 on Sep 23,2026
+# Start time: 14:27:35 on Sep 23,2026
 # vcom -reportprogress 300 ../tb/tb_synthesizer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -67,13 +67,11 @@ vcom ../tb/tb_synthesizer.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity tb_synthesizer
 # -- Compiling architecture structural of tb_synthesizer
-# End time: 13:14:20 on Sep 23,2026, Elapsed time: 0:00:00
+# End time: 14:27:36 on Sep 23,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vsin
-# invalid command name "vsin"
 vsim tb_synthesizer
 # vsim tb_synthesizer 
-# Start time: 13:14:45 on Sep 23,2026
+# Start time: 14:27:46 on Sep 23,2026
 # //  ModelSim DE-64 2022.3 Jul 18 2022
 # //
 # //  Copyright 1991-2022 Mentor Graphics Corporation
@@ -99,22 +97,6 @@ vsim tb_synthesizer
 # Loading work.audio_ctrl(rtl)
 # Loading work.audio_codec_model(behavioral)
 add wave *
-# Unable to retrieve min/max values for "sim:/tb_synthesizer/value_left_model_tb"
-# Unable to retrieve min/max values for "sim:/tb_synthesizer/value_right_model_tb"
-run 1 ms
-run all
-# Invalid time value: all
 run -all
-run -all
-restart -f
-run 10 ms
-1 s
-# invalid command name "1"
-run 1s
-# Invalid time value: 1s
-run 1 s
-# Invalid time value: 1 s
-run 100 ms
-run 1000 ms
-# End time: 13:28:15 on Sep 23,2026, Elapsed time: 0:13:30
+# End time: 14:31:35 on Sep 23,2026, Elapsed time: 0:03:49
 # Errors: 0, Warnings: 0

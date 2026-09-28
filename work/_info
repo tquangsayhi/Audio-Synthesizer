@@ -390,12 +390,12 @@ Astructural
 R1
 R2
 R3
-Z72 DEx4 work 14 tb_synthesizer 0 22 `9l2LlbDRN?AhL`a]VEMj0
+DEx4 work 14 tb_synthesizer 0 22 `9l2LlbDRN?AhL`a]VEMj0
 !i122 45
 l84
-Z73 L31 116
-Z74 V=3gPah^QL8`RYP^`=G36k2
-Z75 !s100 [fdk^XIE8WH1[ce7fPI[`1
+L31 116
+V=3gPah^QL8`RYP^`=G36k2
+!s100 [fdk^XIE8WH1[ce7fPI[`1
 R8
 32
 R68
@@ -406,44 +406,44 @@ R71
 !i113 1
 R14
 Etb_wave_gen
-Z76 w1788953438
+Z72 w1790597219
 R1
 R2
 R3
-!i122 9
+!i122 59
 R4
-Z77 8../tb/tb_wave_gen.vhd
-Z78 F../tb/tb_wave_gen.vhd
+Z73 8../tb/tb_wave_gen.vhd
+Z74 F../tb/tb_wave_gen.vhd
 l0
 L24 1
 V>Id`NGFY>lB=INkYM<R2Y2
 !s100 in6BfobKcQ6hLd:7a]>?k1
 R8
 32
-Z79 !s110 1788953506
+Z75 !s110 1790598921
 !i10b 1
-Z80 !s108 1788953506.000000
-Z81 !s90 -reportprogress|300|../tb/tb_wave_gen.vhd|
-Z82 !s107 ../tb/tb_wave_gen.vhd|
+Z76 !s108 1790598921.000000
+Z77 !s90 -reportprogress|300|../tb/tb_wave_gen.vhd|
+Z78 !s107 ../tb/tb_wave_gen.vhd|
 !i113 1
 R14
 Atestbench
 R1
 R2
 R3
-DEx4 work 11 tb_wave_gen 0 22 >Id`NGFY>lB=INkYM<R2Y2
-!i122 9
+Z79 DEx4 work 11 tb_wave_gen 0 22 >Id`NGFY>lB=INkYM<R2Y2
+!i122 59
 l73
-L29 108
-V8:GoBcMIP4c6nIJ>2Cco`1
-!s100 T:h<1]^W[2RcbL74ecf_N0
+Z80 L29 108
+Z81 V8:GoBcMIP4c6nIJ>2Cco`1
+Z82 !s100 T:h<1]^W[2RcbL74ecf_N0
 R8
 32
-R79
+R75
 !i10b 1
-R80
-R81
-R82
+R76
+R77
+R78
 !i113 1
 R14
 Ptxtio_pkg
@@ -487,25 +487,45 @@ R89
 !i113 1
 R14
 Ewave_gen
-Z90 w1788954520
+Z90 w1790598775
 R1
 R2
 R3
-!i122 39
+!i122 58
 R4
 Z91 8../vhd/wave_gen.vhd
 Z92 F../vhd/wave_gen.vhd
 l0
 R39
-VIZ4Ei5<R]2JTGVJ7EIk021
-!s100 PK[5nd^D>z584e_T1gf473
+Vjn7QB6dYhL^NMA@TfecJ>0
+!s100 3FS=RcX4b_JHLFh3U6I^]1
 R8
 32
-Z93 !s110 1790593852
+Z93 !s110 1790598913
 !i10b 1
-Z94 !s108 1790593851.000000
+Z94 !s108 1790598913.000000
 Z95 !s90 -reportprogress|300|-check_synthesis|../vhd/wave_gen.vhd|
 Z96 !s107 ../vhd/wave_gen.vhd|
+!i113 1
+R13
+R14
+Asine_generator
+R1
+R2
+R3
+DEx4 work 8 wave_gen 0 22 jn7QB6dYhL^NMA@TfecJ>0
+!i122 58
+l57
+L39 55
+VN7R1D89g:3oCh>oA:l[E<1
+!s100 ZM500beW?ZZeTnD;bOTbg0
+R8
+32
+R93
+!i10b 1
+R94
+R95
+R96
 !i113 1
 R13
 R14
@@ -521,11 +541,12 @@ Vm`SXLdQEBnzAfV>cl0Bm<0
 !s100 3973koG`HMo:]^mZK]BYI2
 R8
 32
-R93
+!s110 1790593852
 !i10b 1
-R94
+!s108 1790593851.000000
 R95
 R96
 !i113 1
 R13
 R14
+w1788954520

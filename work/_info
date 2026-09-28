@@ -56,7 +56,7 @@ Eaudio_codec_model
 Z15 w1789996062
 R2
 R3
-!i122 33
+!i122 42
 R4
 Z16 8../vhd/audio_codec_model.vhd
 Z17 F../vhd/audio_codec_model.vhd
@@ -66,9 +66,9 @@ VPfnHEc0m2zSKo<8FU`lS11
 !s100 5PmI;TaNCTHZh=`b>44g00
 R8
 32
-Z18 !s110 1790162806
+Z18 !s110 1790593902
 !i10b 1
-Z19 !s108 1790162805.000000
+Z19 !s108 1790593898.000000
 Z20 !s90 -reportprogress|300|-check_synthesis|../vhd/audio_codec_model.vhd|
 Z21 !s107 ../vhd/audio_codec_model.vhd|
 !i113 1
@@ -78,7 +78,7 @@ Abehavioral
 R2
 R3
 DEx4 work 17 audio_codec_model 0 22 PfnHEc0m2zSKo<8FU`lS11
-!i122 33
+!i122 42
 l52
 L39 95
 V`b4Ci;90kPMR;`PMhm5Zj3
@@ -98,7 +98,7 @@ Z22 w1790157872
 R1
 R2
 R3
-!i122 34
+!i122 41
 R4
 Z23 8../vhd/audio_ctrl.vhd
 Z24 F../vhd/audio_ctrl.vhd
@@ -108,11 +108,11 @@ VL9D<E3KDE;jO0[1S:1]DG1
 !s100 ;>_`ElQj9^<TDTf3jo>B;1
 R8
 32
-!s110 1790162814
+Z25 !s110 1790593874
 !i10b 1
-Z25 !s108 1790162814.000000
-Z26 !s90 -reportprogress|300|-check_synthesis|../vhd/audio_ctrl.vhd|
-Z27 !s107 ../vhd/audio_ctrl.vhd|
+Z26 !s108 1790593873.000000
+Z27 !s90 -reportprogress|300|-check_synthesis|../vhd/audio_ctrl.vhd|
+Z28 !s107 ../vhd/audio_ctrl.vhd|
 !i113 1
 R13
 R14
@@ -121,18 +121,18 @@ R1
 R2
 R3
 DEx4 work 10 audio_ctrl 0 22 L9D<E3KDE;jO0[1S:1]DG1
-!i122 34
+!i122 41
 l69
 L43 113
 VG=ITP1nCAzHX>3Ke0ODd^2
 !s100 A9QFEBIi:<D_MilZT:2`e0
 R8
 32
-!s110 1790162815
-!i10b 1
 R25
+!i10b 1
 R26
 R27
+R28
 !i113 1
 R13
 R14
@@ -151,31 +151,31 @@ R8
 !s110 1789994125
 !i10b 1
 !s108 1789994125.000000
-R26
 R27
+R28
 !i113 1
 R13
 R14
 w1789994029
 Emulti_port_adder
-Z28 w1790162459
+Z29 w1790162967
 R2
 R3
-!i122 35
+!i122 40
 R4
-Z29 8../vhd/multi_port_adder.vhd
-Z30 F../vhd/multi_port_adder.vhd
+Z30 8../vhd/multi_port_adder.vhd
+Z31 F../vhd/multi_port_adder.vhd
 l0
 R7
 VKTa0SdNf31CN]l@B85>3g1
 !s100 _3C@cUfVm1c7NmYR:E9^T2
 R8
 32
-Z31 !s110 1790162822
+Z32 !s110 1790593862
 !i10b 1
-Z32 !s108 1790162821.000000
-Z33 !s90 -reportprogress|300|-check_synthesis|../vhd/multi_port_adder.vhd|
-Z34 !s107 ../vhd/multi_port_adder.vhd|
+Z33 !s108 1790593862.000000
+Z34 !s90 -reportprogress|300|-check_synthesis|../vhd/multi_port_adder.vhd|
+Z35 !s107 ../vhd/multi_port_adder.vhd|
 !i113 1
 R13
 R14
@@ -183,40 +183,40 @@ Astructural
 R2
 R3
 DEx4 work 16 multi_port_adder 0 22 KTa0SdNf31CN]l@B85>3g1
-!i122 35
+!i122 40
 l65
 L40 59
 VUCIdN3f?_a`:3DCNFHCF:1
 !s100 aF<nm?S_S86bCmZ1`Ul;B2
 R8
 32
-R31
-!i10b 1
 R32
+!i10b 1
 R33
 R34
+R35
 !i113 1
 R13
 R14
 Esynthesizer
-Z35 w1790159249
+Z36 w1790159249
 R2
 R3
-!i122 36
+!i122 43
 R4
-Z36 8../vhd/synthesizer.vhd
-Z37 F../vhd/synthesizer.vhd
+Z37 8../vhd/synthesizer.vhd
+Z38 F../vhd/synthesizer.vhd
 l0
-Z38 L26 1
+Z39 L26 1
 V?JTBgzQ;i06g6^j3ka>i82
 !s100 <lc2<IiXkYEJlM>AcSzzT0
 R8
 32
-Z39 !s110 1790162831
+Z40 !s110 1790593914
 !i10b 1
-Z40 !s108 1790162831.000000
-Z41 !s90 -reportprogress|300|-check_synthesis|../vhd/synthesizer.vhd|
-Z42 !s107 ../vhd/synthesizer.vhd|
+Z41 !s108 1790593914.000000
+Z42 !s90 -reportprogress|300|-check_synthesis|../vhd/synthesizer.vhd|
+Z43 !s107 ../vhd/synthesizer.vhd|
 !i113 1
 R13
 R14
@@ -224,41 +224,41 @@ Astructural
 R2
 R3
 DEx4 work 11 synthesizer 0 22 ?JTBgzQ;i06g6^j3ka>i82
-!i122 36
+!i122 43
 l112
 L48 153
 VPA;4i;@EClg1Kg2XhabmB3
 !s100 h[mKQQMJcJjLO<S@;K1L@2
 R8
 32
-R39
-!i10b 1
 R40
+!i10b 1
 R41
 R42
+R43
 !i113 1
 R13
 R14
 Etb_adder
-Z43 w1788349821
+Z44 w1788349821
 R1
 R2
 R3
 !i122 2
 R4
-Z44 8../tb/tb_adder.vhd
-Z45 F../tb/tb_adder.vhd
+Z45 8../tb/tb_adder.vhd
+Z46 F../tb/tb_adder.vhd
 l0
 R7
 VId7:DR^_3Poc]<m4QikOV2
 !s100 GV8KA<:ca`oE5Kb=faGnj1
 R8
 32
-Z46 !s110 1788350952
+Z47 !s110 1788350952
 !i10b 1
-Z47 !s108 1788350952.000000
-Z48 !s90 -reportprogress|300|../tb/tb_adder.vhd|
-Z49 !s107 ../tb/tb_adder.vhd|
+Z48 !s108 1788350952.000000
+Z49 !s90 -reportprogress|300|../tb/tb_adder.vhd|
+Z50 !s107 ../tb/tb_adder.vhd|
 !i113 1
 R14
 Atestbench
@@ -273,31 +273,31 @@ VZ5a22BQAbL01`ojGO<2PA0
 !s100 >EHHGB<RIcJMK1DbMjbQP3
 R8
 32
-R46
-!i10b 1
 R47
+!i10b 1
 R48
 R49
+R50
 !i113 1
 R14
 Etb_audio_ctrl
-Z50 w1789989627
+R15
 R1
 R2
 R3
-!i122 19
+!i122 44
 R4
 Z51 8../tb/tb_audio_ctrl.vhd
 Z52 F../tb/tb_audio_ctrl.vhd
 l0
-L5 1
-VKXF3gXbOkbd_o`@<_4RP42
-!s100 3nz`Va[KnGMJQn6WT;4Tm0
+R39
+VWcQFAL9d?X]K1NZQ9MY]m0
+!s100 U`QikJAo_gU6L_PjYOV5@1
 R8
 32
-Z53 !s110 1789993740
+Z53 !s110 1790593936
 !i10b 1
-Z54 !s108 1789993739.000000
+Z54 !s108 1790593935.000000
 Z55 !s90 -reportprogress|300|../tb/tb_audio_ctrl.vhd|
 Z56 !s107 ../tb/tb_audio_ctrl.vhd|
 !i113 1
@@ -306,12 +306,12 @@ Atestbench
 R1
 R2
 R3
-DEx4 work 13 tb_audio_ctrl 0 22 KXF3gXbOkbd_o`@<_4RP42
-!i122 19
-l71
-L11 117
-VZ62lzTKiGlUG00Z9GZ`3E2
-!s100 7;e>U4BF;F2V4Ql5Ln9af2
+DEx4 work 13 tb_audio_ctrl 0 22 WcQFAL9d?X]K1NZQ9MY]m0
+!i122 44
+l101
+L32 137
+VZkb=LEB1?3Co7lOL`eePc2
+!s100 FM4PmW=NZd8HBQ<L47Xj]3
 R8
 32
 R53
@@ -369,19 +369,19 @@ Z65 w1790158204
 R1
 R2
 R3
-!i122 38
+!i122 45
 R4
 Z66 8../tb/tb_synthesizer.vhd
 Z67 F../tb/tb_synthesizer.vhd
 l0
-R38
+R39
 V`9l2LlbDRN?AhL`a]VEMj0
 !s100 nc`gKV8_n8>;IeY<T?N;k2
 R8
 32
-Z68 !s110 1790162856
+Z68 !s110 1790593944
 !i10b 1
-Z69 !s108 1790162855.000000
+Z69 !s108 1790593943.000000
 Z70 !s90 -reportprogress|300|../tb/tb_synthesizer.vhd|
 Z71 !s107 ../tb/tb_synthesizer.vhd|
 !i113 1
@@ -391,7 +391,7 @@ R1
 R2
 R3
 Z72 DEx4 work 14 tb_synthesizer 0 22 `9l2LlbDRN?AhL`a]VEMj0
-!i122 38
+!i122 45
 l84
 Z73 L31 116
 Z74 V=3gPah^QL8`RYP^`=G36k2
@@ -491,19 +491,19 @@ Z90 w1788954520
 R1
 R2
 R3
-!i122 37
+!i122 39
 R4
 Z91 8../vhd/wave_gen.vhd
 Z92 F../vhd/wave_gen.vhd
 l0
-R38
+R39
 VIZ4Ei5<R]2JTGVJ7EIk021
 !s100 PK[5nd^D>z584e_T1gf473
 R8
 32
-Z93 !s110 1790162840
+Z93 !s110 1790593852
 !i10b 1
-Z94 !s108 1790162839.000000
+Z94 !s108 1790593851.000000
 Z95 !s90 -reportprogress|300|-check_synthesis|../vhd/wave_gen.vhd|
 Z96 !s107 ../vhd/wave_gen.vhd|
 !i113 1
@@ -514,7 +514,7 @@ R1
 R2
 R3
 DEx4 work 8 wave_gen 0 22 IZ4Ei5<R]2JTGVJ7EIk021
-!i122 37
+!i122 39
 l56
 L42 62
 Vm`SXLdQEBnzAfV>cl0Bm<0

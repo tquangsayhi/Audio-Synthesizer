@@ -1,0 +1,36 @@
+1. LUTs: 882 & 1.66%
+2. FFs:297 & 0.28%
+3. IOs: 16  & 12.80%
+4. PLLs: 1 & 25%
+
+1. i2c buscontroller: 74 / 63 / 29
+2. all wave generators: 757 / 128 / 212
+3. multiport adder: 17 / 48 / 13
+4. audio control: 30 / 42 / 17
+
+clk_out1:
+Requirement period: 20.000 ns
+Slack: 14.693 ns
+Minimum period: 5.307 ns
+Maximum frequency: 188.43 MHz
+
+clk_out2:
+Requirement period: 81.379 ns
+Slack: 63.690 ns
+Minimum period: 17.689 ns
+Maximum frequency: 56.53 MHz
+
+Synthesis changes VHDL code language into logical ciruit standard gates. For example flip-flops and Look-Up-Tables.
+Inputs: HDL source code files and IP block definitions.
+Outputs: A synthesized logical netlist.
+
+Implementation maps the logical netlist that we got from synthesization into physical silicon of the target FPGA. It puts the logic components into specific physical coordinates on the chip and routes the electrical wire connections between them.
+Inputs: The synthesized netlist and physical constraint files (XDC).
+Outputs: A fully routed physical design and also it gives performance reports detailing timing, slack, power consumption and hardware utilization.
+
+Bitstream generation converts the physical routing data into a binary configuration file and downloads it to the FPGA chip. It sets the internal SRAM switches and configures the hardware to match the design.
+Inputs: The implemented and routed physical design.
+Outputs: A binary bitstream file.
+
+We managed to do the test run after first thinking the issue was with our synthesizer, but it was actually with our .xdc file and ports. We changed them and it worked. 
+The sound of our own visualizer was more high pitch than when we used the premade one. We think it could be because of our bonus task sine wave generator that is different to the triangular wave generator.

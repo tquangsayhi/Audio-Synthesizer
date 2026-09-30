@@ -1,0 +1,849 @@
+
+*** Running vivado
+    with args -log system_top_level_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_top_level_wrapper.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source system_top_level_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/data/ip'.
+add_files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 291.902 ; gain = 19.160
+Command: synth_design -top system_top_level_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 27876 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 371.953 ; gain = 76.312
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_top_level_wrapper' [P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level_wrapper.vhd:29]
+INFO: [Synth 8-3491] module 'system_top_level' declared at 'P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level.vhd:14' bound to instance 'system_top_level_i' of component 'system_top_level' [P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level_wrapper.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'system_top_level' [P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level.vhd:33]
+INFO: [Synth 8-3491] module 'system_top_level_clk_wiz_0_0' declared at 'p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0.v:71' bound to instance 'clk_wiz_0' of component 'system_top_level_clk_wiz_0_0' [P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'system_top_level_clk_wiz_0_0' [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0.v:71]
+INFO: [Synth 8-638] synthesizing module 'system_top_level_clk_wiz_0_0_clk_wiz' [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_clk_wiz.v:69]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_clk_wiz.v:119]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_clk_wiz.v:119]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_clk_wiz.v:122]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_clk_wiz.v:122]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14470]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14470]
+INFO: [Synth 8-638] synthesizing module 'PLLE2_ADV' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:33019]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 58 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE bound to: 29 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 118 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'PLLE2_ADV' (2#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:33019]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-638] synthesizing module 'BUFGCE' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:617]
+	Parameter CE_TYPE bound to: SYNC - type: string 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_I_INVERTED bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'BUFGCE' (4#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:617]
+INFO: [Synth 8-638] synthesizing module 'BUFH' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:806]
+INFO: [Synth 8-256] done synthesizing module 'BUFH' (5#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:806]
+INFO: [Synth 8-256] done synthesizing module 'system_top_level_clk_wiz_0_0_clk_wiz' (6#1) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'system_top_level_clk_wiz_0_0' (7#1) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0.v:71]
+INFO: [Synth 8-3491] module 'system_top_level_i2c_config_0_0' declared at 'p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_i2c_config_0_0/synth/system_top_level_i2c_config_0_0.v:56' bound to instance 'i2c_config_0' of component 'system_top_level_i2c_config_0_0' [P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'system_top_level_i2c_config_0_0' [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_i2c_config_0_0/synth/system_top_level_i2c_config_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'i2c_config' [P:/7/verilog/i2c_config.v:18]
+INFO: [Synth 8-638] synthesizing module 'LUT6' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000000000010000010101010101010100000000000000000101010101010101 
+INFO: [Synth 8-256] done synthesizing module 'LUT6' (8#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT4' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0000111101110000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4' (9#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT5' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b00001111000111111100000011000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5' (10#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized0' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b11111111111111111111111111111110 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized0' (10#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized1' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b00000000000000000000100000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized1' (10#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized2' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b11111111111111111000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized2' (10#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT1' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20458]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'LUT1' (11#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20458]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized0' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0101010101011001010101011101010101010101010110010101010100010101 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized0' (11#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized0' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0000100000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized0' (11#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized1' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0000000001000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized1' (11#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized1' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000010000000100000001 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized1' (11#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'FDCE' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3748]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CLR_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'FDCE' (12#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3748]
+INFO: [Synth 8-638] synthesizing module 'GND' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:4942]
+INFO: [Synth 8-256] done synthesizing module 'GND' (13#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:4942]
+INFO: [Synth 8-638] synthesizing module 'VCC' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:45038]
+INFO: [Synth 8-256] done synthesizing module 'VCC' (14#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:45038]
+INFO: [Synth 8-638] synthesizing module 'LUT3' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+	Parameter INIT bound to: 8'b00010011 
+INFO: [Synth 8-256] done synthesizing module 'LUT3' (15#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized2' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0000100100001111 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized2' (15#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized3' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b00000000111000010000000011111111 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized3' (15#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized2' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0100010001000100010001000100000000000000000000000000000000000100 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized2' (15#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized4' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b00000000100110100000000011111111 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized4' (15#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized3' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000000000000000110100000000000000000000000000000000000011110000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized3' (15#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized0' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+	Parameter INIT bound to: 8'b00000001 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized0' (15#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized3' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0000000000000001 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized3' (15#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'FDPE' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'FDPE' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized4' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000000000000000011100000000000011111111111111111111111111111111 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized4' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized5' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000001100000011000000110000001000000011000000100000001100110011 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized5' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized6' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b1111111111111111111111111111111111111111111111111111111111111011 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized6' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized1' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+	Parameter INIT bound to: 8'b11011111 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized1' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized7' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0111011100000000011101010000000001110101000000000111010100000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized7' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized5' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b10101011101010101010101010101010 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized5' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized4' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b1111111111110111 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized4' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized5' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0101010101000011 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized5' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized8' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b1010101010101010011010101010101010101010101010101010101010101010 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized8' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized6' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0000000100010000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized6' (16#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT2' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+	Parameter INIT bound to: 4'b0110 
+INFO: [Synth 8-256] done synthesizing module 'LUT2' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized2' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+	Parameter INIT bound to: 8'b01101010 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized2' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized7' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0110101010101010 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized7' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized6' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b01101010101010101010101010101010 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized6' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized9' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0110101010101010101010101010101010101010101010101010101010101010 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized9' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized0' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+	Parameter INIT bound to: 4'b1001 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized0' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized3' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+	Parameter INIT bound to: 8'b10011010 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized3' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized8' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b1011111101000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized8' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized10' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0111111111111111111111111111111111111111111111111111111111111111 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized10' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized7' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b10011010101010101010101010101010 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized7' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized11' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000001000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized11' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized1' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+	Parameter INIT bound to: 4'b0001 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized1' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized4' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+	Parameter INIT bound to: 8'b11111011 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized4' (17#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-638] synthesizing module 'OBUF' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:22272]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUF' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:22272]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized12' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000010000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized12' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized8' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b00000000000000000010000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized8' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized5' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+	Parameter INIT bound to: 8'b01000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized5' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized9' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b1110001100010100 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized9' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized10' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0100100010101101 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized10' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized11' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0001111111101101 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized11' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized12' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b1000100000000001 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized12' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized13' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0000111101111110 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized13' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized14' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b1110111011101100 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized14' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized15' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0000000000000100 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized15' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized16' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0000101111101010 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized16' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized6' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+	Parameter INIT bound to: 8'b10000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized6' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized17' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b1110000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized17' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized18' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b1100100010001101 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized18' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized19' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b1111000110011011 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized19' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized20' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0010011110011100 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized20' (18#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'FDRE' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'FDRE' (19#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized13' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b1111111111111111001000111111111100000000000000000010001100000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized13' (19#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized14' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b1111111111111111111111101111101111111011111111111111111111111110 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized14' (19#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized15' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000111100001011111111111111111100001111000010110000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized15' (19#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized16' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000101000000010 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized16' (19#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized7' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+	Parameter INIT bound to: 8'b11101010 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized7' (19#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized9' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b00000000000000000000001000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized9' (19#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'IOBUF' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IOBUF' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized21' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0010111100100000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized21' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized17' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b1111111111110100111111111111111111111111111101000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized17' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized22' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0000000000110001 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized22' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized10' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b11100010110011001110001000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized10' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized18' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000000000001010000000101010001010100000101010100000001010100010 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized18' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized19' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000010111110101000000110000001100000101111101011111001111110011 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized19' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized8' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+	Parameter INIT bound to: 8'b00100011 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized8' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized20' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b1111111111110010000000001111001000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized20' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized11' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b00001100000010100000000000001010 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized11' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized21' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000010101010101010100000000000000010 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized21' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized22' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b1010100010101000101010001010101010101000101010001010100010101000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized22' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized23' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+	Parameter INIT bound to: 64'b1010000010100000000000101010001010101010101010100000001010100010 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized23' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized23' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+	Parameter INIT bound to: 16'b0001000000010001 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized23' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized12' [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+	Parameter INIT bound to: 32'b00000000000000000000110001000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized12' (20#1) [C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'i2c_config' (21#1) [P:/7/verilog/i2c_config.v:18]
+INFO: [Synth 8-256] done synthesizing module 'system_top_level_i2c_config_0_0' (22#1) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_i2c_config_0_0/synth/system_top_level_i2c_config_0_0.v:56]
+INFO: [Synth 8-3491] module 'system_top_level_synthesizer_0_0' declared at 'p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_synthesizer_0_0/synth/system_top_level_synthesizer_0_0.vhd:56' bound to instance 'synthesizer_0' of component 'system_top_level_synthesizer_0_0' [P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'system_top_level_synthesizer_0_0' [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_synthesizer_0_0/synth/system_top_level_synthesizer_0_0.vhd:67]
+	Parameter clk_freq_g bound to: 12288000 - type: integer 
+	Parameter sample_rate_g bound to: 48000 - type: integer 
+	Parameter data_width_g bound to: 16 - type: integer 
+	Parameter n_keys_g bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'synthesizer' declared at 'P:/7/vhd/synthesizer.vhd:26' bound to instance 'U0' of component 'synthesizer' [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_synthesizer_0_0/synth/system_top_level_synthesizer_0_0.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'synthesizer' [P:/7/vhd/synthesizer.vhd:48]
+	Parameter clk_freq_g bound to: 12288000 - type: integer 
+	Parameter sample_rate_g bound to: 48000 - type: integer 
+	Parameter data_width_g bound to: 16 - type: integer 
+	Parameter n_keys_g bound to: 4 - type: integer 
+	Parameter width_g bound to: 16 - type: integer 
+	Parameter step_g bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'wave_gen' declared at 'P:/7/vhd/wave_gen.vhd:26' bound to instance 'wave_gen1' of component 'wave_gen' [P:/7/vhd/synthesizer.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'wave_gen' [P:/7/vhd/wave_gen.vhd:39]
+	Parameter width_g bound to: 16 - type: integer 
+	Parameter step_g bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'wave_gen' (23#1) [P:/7/vhd/wave_gen.vhd:39]
+	Parameter width_g bound to: 16 - type: integer 
+	Parameter step_g bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'wave_gen' declared at 'P:/7/vhd/wave_gen.vhd:26' bound to instance 'wave_gen2' of component 'wave_gen' [P:/7/vhd/synthesizer.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'wave_gen__parameterized1' [P:/7/vhd/wave_gen.vhd:39]
+	Parameter width_g bound to: 16 - type: integer 
+	Parameter step_g bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'wave_gen__parameterized1' (23#1) [P:/7/vhd/wave_gen.vhd:39]
+	Parameter width_g bound to: 16 - type: integer 
+	Parameter step_g bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'wave_gen' declared at 'P:/7/vhd/wave_gen.vhd:26' bound to instance 'wave_gen3' of component 'wave_gen' [P:/7/vhd/synthesizer.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'wave_gen__parameterized3' [P:/7/vhd/wave_gen.vhd:39]
+	Parameter width_g bound to: 16 - type: integer 
+	Parameter step_g bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'wave_gen__parameterized3' (23#1) [P:/7/vhd/wave_gen.vhd:39]
+	Parameter width_g bound to: 16 - type: integer 
+	Parameter step_g bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'wave_gen' declared at 'P:/7/vhd/wave_gen.vhd:26' bound to instance 'wave_gen4' of component 'wave_gen' [P:/7/vhd/synthesizer.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'wave_gen__parameterized5' [P:/7/vhd/wave_gen.vhd:39]
+	Parameter width_g bound to: 16 - type: integer 
+	Parameter step_g bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'wave_gen__parameterized5' (23#1) [P:/7/vhd/wave_gen.vhd:39]
+	Parameter operand_width_g bound to: 16 - type: integer 
+	Parameter num_of_operands_g bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'multi_port_adder' declared at 'P:/7/vhd/multi_port_adder.vhd:25' bound to instance 'mul_port_adder' of component 'multi_port_adder' [P:/7/vhd/synthesizer.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'multi_port_adder' [P:/7/vhd/multi_port_adder.vhd:40]
+	Parameter operand_width_g bound to: 16 - type: integer 
+	Parameter num_of_operands_g bound to: 4 - type: integer 
+	Parameter operand_width_g bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'adder' declared at 'P:/7/vhd/adder.vhd:25' bound to instance 'adder_inst' of component 'adder' [P:/7/vhd/multi_port_adder.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'adder' [P:/7/vhd/adder.vhd:41]
+	Parameter operand_width_g bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder' (24#1) [P:/7/vhd/adder.vhd:41]
+	Parameter operand_width_g bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'adder' declared at 'P:/7/vhd/adder.vhd:25' bound to instance 'adder_inst' of component 'adder' [P:/7/vhd/multi_port_adder.vhd:75]
+	Parameter operand_width_g bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'adder' declared at 'P:/7/vhd/adder.vhd:25' bound to instance 'adder_inst' of component 'adder' [P:/7/vhd/multi_port_adder.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'multi_port_adder' (25#1) [P:/7/vhd/multi_port_adder.vhd:40]
+	Parameter ref_clk_freq_g bound to: 12288000 - type: integer 
+	Parameter sample_rate_g bound to: 48000 - type: integer 
+	Parameter data_width_g bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'audio_ctrl' declared at 'P:/7/vhd/audio_ctrl.vhd:25' bound to instance 'audio_control' of component 'audio_ctrl' [P:/7/vhd/synthesizer.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'audio_ctrl' [P:/7/vhd/audio_ctrl.vhd:43]
+	Parameter ref_clk_freq_g bound to: 12288000 - type: integer 
+	Parameter sample_rate_g bound to: 48000 - type: integer 
+	Parameter data_width_g bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'audio_ctrl' (26#1) [P:/7/vhd/audio_ctrl.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'synthesizer' (27#1) [P:/7/vhd/synthesizer.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'system_top_level_synthesizer_0_0' (28#1) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_synthesizer_0_0/synth/system_top_level_synthesizer_0_0.vhd:67]
+INFO: [Synth 8-3491] module 'system_top_level_util_vector_logic_0_1' declared at 'p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_util_vector_logic_0_1/synth/system_top_level_util_vector_logic_0_1.v:57' bound to instance 'util_vector_logic_0' of component 'system_top_level_util_vector_logic_0_1' [P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'system_top_level_util_vector_logic_0_1' [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_util_vector_logic_0_1/synth/system_top_level_util_vector_logic_0_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'util_vector_logic_v2_0_1_util_vector_logic' [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ipshared/25ee/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+	Parameter C_OPERATION bound to: xor - type: string 
+	Parameter C_SIZE bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'util_vector_logic_v2_0_1_util_vector_logic' (29#1) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ipshared/25ee/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-256] done synthesizing module 'system_top_level_util_vector_logic_0_1' (30#1) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_util_vector_logic_0_1/synth/system_top_level_util_vector_logic_0_1.v:57]
+INFO: [Synth 8-3491] module 'system_top_level_util_vector_logic_1_0' declared at 'p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_util_vector_logic_1_0/synth/system_top_level_util_vector_logic_1_0.v:57' bound to instance 'util_vector_logic_1' of component 'system_top_level_util_vector_logic_1_0' [P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level.vhd:132]
+INFO: [Synth 8-638] synthesizing module 'system_top_level_util_vector_logic_1_0' [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_util_vector_logic_1_0/synth/system_top_level_util_vector_logic_1_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'util_vector_logic_v2_0_1_util_vector_logic__parameterized0' [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ipshared/25ee/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+	Parameter C_OPERATION bound to: and - type: string 
+	Parameter C_SIZE bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'util_vector_logic_v2_0_1_util_vector_logic__parameterized0' (30#1) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ipshared/25ee/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-256] done synthesizing module 'system_top_level_util_vector_logic_1_0' (31#1) [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_util_vector_logic_1_0/synth/system_top_level_util_vector_logic_1_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'system_top_level' (32#1) [P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'system_top_level_wrapper' (33#1) [P:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/hdl/system_top_level_wrapper.vhd:29]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 412.277 ; gain = 116.637
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 412.277 ; gain = 116.637
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_board.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+Finished Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_board.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+Finished Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_level_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_level_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [P:/7/xdc/synth.xdc]
+Finished Parsing XDC File [P:/7/xdc/synth.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [P:/7/xdc/synth.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_level_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_level_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [P:/7/syn/synth_top/synth_top.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [P:/7/syn/synth_top/synth_top.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [P:/7/syn/synth_top/synth_top.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_top_level_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_top_level_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_late.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+Finished Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_late.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  BUFGCE => BUFGCTRL: 2 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 741.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for system_top_level_i/clk_wiz_0/inst. (constraint file  P:/7/syn/synth_top/synth_top.runs/synth_1/dont_touch.xdc, line 25).
+Applied set_property DONT_TOUCH = true for system_top_level_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_top_level_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_top_level_i/i2c_config_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_top_level_i/synthesizer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_top_level_i/util_vector_logic_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_top_level_i/util_vector_logic_1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [P:/7/vhd/wave_gen.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [P:/7/vhd/wave_gen.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [P:/7/vhd/wave_gen.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [P:/7/vhd/wave_gen.vhd:63]
+INFO: [Synth 8-5544] ROM "bclk_r" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "lrclk_r" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
+	   2 Input     17 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 4     
+	   3 Input     16 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      4 Bit         XORs := 1     
++---Registers : 
+	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 6     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 16    
+	   2 Input     16 Bit        Muxes := 7     
+	   5 Input      6 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module system_top_level_clk_wiz_0_0_clk_wiz 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+Module wave_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 1     
+Module wave_gen__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 1     
+Module wave_gen__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 1     
+Module wave_gen__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 1     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+Module audio_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   5 Input      6 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+Module util_vector_logic_v2_0_1_util_vector_logic 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [P:/7/vhd/wave_gen.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [P:/7/vhd/wave_gen.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [P:/7/vhd/wave_gen.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [P:/7/vhd/wave_gen.vhd:63]
+INFO: [Synth 8-5546] ROM "lrclk_r" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3332] Sequential element (U0/mul_port_adder/gen_adders[1].adder_inst/sum_r_reg[16]) is unused and will be removed from module system_top_level_synthesizer_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/mul_port_adder/gen_adders[0].adder_inst/sum_r_reg[16]) is unused and will be removed from module system_top_level_synthesizer_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/mul_port_adder/gen_adders[2].adder_inst/sum_r_reg[16]) is unused and will be removed from module system_top_level_synthesizer_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |BUFGCE    |     2|
+|3     |BUFH      |     2|
+|4     |CARRY4    |   174|
+|5     |LUT1      |   196|
+|6     |LUT2      |   256|
+|7     |LUT3      |   244|
+|8     |LUT4      |    46|
+|9     |LUT5      |   121|
+|10    |LUT6      |   153|
+|11    |PLLE2_ADV |     1|
+|12    |FDCE      |   163|
+|13    |FDPE      |    63|
+|14    |FDRE      |    71|
+|15    |FDSE      |     1|
+|16    |IBUF      |     8|
+|17    |IOBUF     |     1|
+|18    |OBUF      |    14|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+-------------------------------------------+------+
+|      |Instance                             |Module                                     |Cells |
++------+-------------------------------------+-------------------------------------------+------+
+|1     |top                                  |                                           |  1518|
+|2     |  system_top_level_i                 |system_top_level                           |  1505|
+|3     |    clk_wiz_0                        |system_top_level_clk_wiz_0_0               |    23|
+|4     |      inst                           |system_top_level_clk_wiz_0_0_clk_wiz       |    23|
+|5     |    i2c_config_0                     |system_top_level_i2c_config_0_0            |   171|
+|6     |      inst                           |i2c_config                                 |   171|
+|7     |    synthesizer_0                    |system_top_level_synthesizer_0_0           |  1306|
+|8     |      U0                             |synthesizer                                |  1306|
+|9     |        audio_control                |audio_ctrl                                 |    76|
+|10    |        mul_port_adder               |multi_port_adder                           |    77|
+|11    |          \gen_adders[0].adder_inst  |adder                                      |    21|
+|12    |          \gen_adders[1].adder_inst  |adder_0                                    |    20|
+|13    |          \gen_adders[2].adder_inst  |adder_1                                    |    36|
+|14    |        wave_gen1                    |wave_gen                                   |   265|
+|15    |        wave_gen2                    |wave_gen__parameterized1                   |   302|
+|16    |        wave_gen3                    |wave_gen__parameterized3                   |   286|
+|17    |        wave_gen4                    |wave_gen__parameterized5                   |   300|
+|18    |    util_vector_logic_0              |system_top_level_util_vector_logic_0_1     |     4|
+|19    |      inst                           |util_vector_logic_v2_0_1_util_vector_logic |     4|
+|20    |    util_vector_logic_1              |system_top_level_util_vector_logic_1_0     |     1|
++------+-------------------------------------+-------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 741.145 ; gain = 445.504
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 741.145 ; gain = 116.637
+Synthesis Optimization Complete : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 741.145 ; gain = 445.504
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 186 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. system_top_level_i/i2c_config_0/inst/clk_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. system_top_level_i/i2c_config_0/inst/rst_n_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. system_top_level_i/i2c_config_0/inst/finished_out_OBUF_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. system_top_level_i/i2c_config_0/inst/param_status_out_OBUF[0]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. system_top_level_i/i2c_config_0/inst/param_status_out_OBUF[1]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. system_top_level_i/i2c_config_0/inst/param_status_out_OBUF[2]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. system_top_level_i/i2c_config_0/inst/param_status_out_OBUF[3]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  BUFGCE => BUFGCTRL: 2 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+264 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:22 . Memory (MB): peak = 741.145 ; gain = 449.242
+INFO: [Common 17-1381] The checkpoint 'P:/7/syn/synth_top/synth_top.runs/synth_1/system_top_level_wrapper.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 741.145 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 30 13:26:36 2026...

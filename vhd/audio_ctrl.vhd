@@ -74,23 +74,17 @@ begin
     aud_data_out  <= data_r(data_width_g-1); 
  
     -- Single synchronous process driven by the main clock
-    process(clk) 
+    process(clk, rst_n) 
     begin 
-        if rising_edge(clk) then 
+        if rst_n = '0' then 
  
-            -- Synchronous reset
-            if rst_n = '0' then 
- 
-                bclk_counter_r <= 0; 
-                bit_counter_r  <= 0; 
- 
-                bclk_r  <= '1'; 
-                lrclk_r <= '0'; 
- 
-                data_r       <= (others => '0'); 
-                right_data_r <= (others => '0'); 
- 
-            else 
+            bclk_counter_r <= 0; 
+            bit_counter_r  <= 0; 
+            bclk_r  <= '1'; 
+            lrclk_r <= '0'; 
+            data_r       <= (others => '0'); 
+            right_data_r <= (others => '0'); 
+        else if rising_edge(clk) then 
  
                 -- Wait for BCLK half-period to elapse
                 if bclk_counter_r = bclk_half_period_c - 1 then 
@@ -146,8 +140,6 @@ begin
                     bclk_counter_r <= bclk_counter_r + 1; 
  
                 end if; 
- 
-            end if; 
  
         end if; 
     end process; 

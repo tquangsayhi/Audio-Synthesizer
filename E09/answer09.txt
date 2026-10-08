@@ -1,3 +1,6 @@
+Exercise 09 Tatu Nyberg & Quang Le
+30.09.2026
+
 1. LUTs: 882 & 1.66%
 2. FFs:297 & 0.28%
 3. IOs: 16  & 12.80%

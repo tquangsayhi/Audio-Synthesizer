@@ -163,7 +163,7 @@ begin
         wait_count_r <= wait_count_r - 1;
       else
         -- Defaults for the time until the NEXT phase action.
-        -- START/IDLE/ADVANCE use a half-period delay instead.
+        
         if state_r = send_bit or state_r = ack or
            state_r = stop_condition then
           case phase_r is
@@ -173,12 +173,13 @@ begin
             when 3 => wait_count_r <= high_second_c - 1;
           end case;
         else
+        -- START/IDLE/ADVANCE use a half-period delay instead.
           wait_count_r <= low_cycles_c - 1;
         end if;
 
         case state_r is
           when idle =>
-            -- Bus-free interval before the first START.
+            
             scl_r <= '1';
             sda_drive_low_r <= '0';
             state_r <= start_condition;
@@ -257,8 +258,6 @@ begin
                 phase_r <= 2;
               when 2 =>
                 scl_r <= '1';
-                -- Give STOP a full half-period of setup time, including
-                -- when i2c_freq_g is set to the Standard-mode maximum.
                 wait_count_r <= low_cycles_c - 1;
                 phase_r <= 3;
               when 3 =>
@@ -270,7 +269,6 @@ begin
           when advance =>
             -- STOP has completed; leave both lines high during this decision.
             if transaction_failed_r = '1' then
-              -- No counter/index increment: retry the entire same parameter.
               state_r <= start_condition;
             else
               param_count_r <= param_count_r + 1;
@@ -284,7 +282,7 @@ begin
             end if;
 
           when done =>
-            -- Registers retain their values. No further I2C activity.
+            -- Registers retain their values.
             wait_count_r <= 0;
         end case;
       end if;

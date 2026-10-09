@@ -1,32 +1,35 @@
 cd sim
 # reading modelsim.ini
-vcom -check_synthesis ../vhd/wave_gen.vhd
+vcom -check_synthesis -cover sbf ../vhd/i2c_config.vhd
 # Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 15:35:13 on Sep 28,2026
-# vcom -reportprogress 300 -check_synthesis ../vhd/wave_gen.vhd 
+# Start time: 13:03:55 on Oct 09,2026
+# vcom -reportprogress 300 -check_synthesis -cover sbf ../vhd/i2c_config.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity wave_gen
-# -- Compiling architecture sine_generator of wave_gen
-# End time: 15:35:13 on Sep 28,2026, Elapsed time: 0:00:00
+# -- Compiling entity i2c_config
+# -- Compiling architecture rtl of i2c_config
+# ** Note: (vcom-143) Recognized 2 FSMs in architecture body "i2c_config(rtl)".
+# End time: 13:04:02 on Oct 09,2026, Elapsed time: 0:00:07
 # Errors: 0, Warnings: 0
-vcom ../tb/tb_wave_gen.vhd
+vcom -cover sbf ../tb/tb_i2c_config.vhd
 # Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
-# Start time: 15:35:21 on Sep 28,2026
-# vcom -reportprogress 300 ../tb/tb_wave_gen.vhd 
+# Start time: 13:04:20 on Oct 09,2026
+# vcom -reportprogress 300 -cover sbf ../tb/tb_i2c_config.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity tb_wave_gen
-# -- Compiling architecture testbench of tb_wave_gen
-# End time: 15:35:21 on Sep 28,2026, Elapsed time: 0:00:00
+# -- Compiling entity tb_i2c_config
+# -- Compiling architecture testbench of tb_i2c_config
+# -- Loading entity i2c_config
+# ** Note: (vcom-143) Recognized 1 FSM in architecture body "tb_i2c_config(testbench)".
+# End time: 13:04:21 on Oct 09,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vsim tb_wave_gen
-# vsim tb_wave_gen 
-# Start time: 15:35:34 on Sep 28,2026
+vsim -coverage work.tb_i2c_config
+# vsim -coverage work.tb_i2c_config 
+# Start time: 13:04:33 on Oct 09,2026
 # //  ModelSim DE-64 2022.3 Jul 18 2022
 # //
 # //  Copyright 1991-2022 Mentor Graphics Corporation
@@ -44,31 +47,287 @@ vsim tb_wave_gen
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.tb_wave_gen(testbench)
-# Loading work.wave_gen(sine_generator)
-add wave*
-# ** Error: bad option "wave*": should be one of...
-#   add atv ?options? ?arg arg ...?
-#   add button text action ?disable? ?options? ?help?
-#   add dataflow ?options? ?arg arg ...?
-#   add lists ?options? ?arg arg ...?
-#   add log ?options? ?arg arg ...?
-#   add memory options ?arg arg ...?
-#   add message ?options? ?arg arg ...?
-#   add monitor ?options? ?arg arg ...?
-#   add schematic ?options? ?arg arg ...?
-#   add testbrowser ?options? ?arg arg ...?
-#   add virtual ?options? ?arg arg ...?
-#   add watch ?options? ?arg arg ...?
-#   add wave ?options? ?arg arg ...?
-add wave *
-run 1 ms
+# Loading work.tb_i2c_config(testbench)
+# Loading work.i2c_config(rtl)
+run -all
+# ** Note: NACK after byte 0
+#    Time: 475110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: NACK after byte 1
+#    Time: 1487610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: NACK after byte 2
+#    Time: 2950110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 1
+#    Time: 4487610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 2
+#    Time: 5950110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 3
+#    Time: 7412610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 4
+#    Time: 8875110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 5
+#    Time: 10337610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 6
+#    Time: 11800110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 7
+#    Time: 13262610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 8
+#    Time: 14725110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 9
+#    Time: 16187610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 10
+#    Time: 17650110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 11
+#    Time: 19112610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 12
+#    Time: 20575110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 13
+#    Time: 22037610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 14
+#    Time: 23500110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 15
+#    Time: 24962610 ns  Iteration: 0  Instance: /tb_i2c_config
 # ** Failure: Simulation done
-#    Time: 1 ms  Iteration: 0  Process: /tb_wave_gen/line__131#0 File: ../tb/tb_wave_gen.vhd
-# Break in Architecture testbench at ../tb/tb_wave_gen.vhd line 131
-# unknown option "-rowmargin"
-# unknown option "-rowmargin"
-# unknown option "-rowmargin"
-# unknown option "-rowmargin"
-# End time: 15:38:02 on Sep 28,2026, Elapsed time: 0:02:28
+#    Time: 24975090 ns  Iteration: 2  Process: /tb_i2c_config/line__321#0 File: ../tb/tb_i2c_config.vhd
+# Break in Architecture testbench at ../tb/tb_i2c_config.vhd line 322
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+vcom -check_synthesis -cover sbf ../vhd/i2c_config.vhd
+# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 13:07:56 on Oct 09,2026
+# vcom -reportprogress 300 -check_synthesis -cover sbf ../vhd/i2c_config.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_config
+# -- Compiling architecture rtl of i2c_config
+# ** Note: (vcom-143) Recognized 2 FSMs in architecture body "i2c_config(rtl)".
+# End time: 13:07:57 on Oct 09,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -cover sbf ../tb/tb_i2c_config.vhd
+# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 13:08:01 on Oct 09,2026
+# vcom -reportprogress 300 -cover sbf ../tb/tb_i2c_config.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_i2c_config
+# -- Compiling architecture testbench of tb_i2c_config
+# -- Loading entity i2c_config
+# ** Note: (vcom-143) Recognized 1 FSM in architecture body "tb_i2c_config(testbench)".
+# End time: 13:08:04 on Oct 09,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+vsim -coverage work.tb_i2c_config
+# End time: 13:08:11 on Oct 09,2026, Elapsed time: 0:03:38
+# Errors: 0, Warnings: 0
+# vsim -coverage work.tb_i2c_config 
+# Start time: 13:08:12 on Oct 09,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_i2c_config(testbench)
+# Loading work.i2c_config(rtl)
+run -all
+# ** Note: NACK after byte 0
+#    Time: 475110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: NACK after byte 1
+#    Time: 1487610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: NACK after byte 2
+#    Time: 2950110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 1
+#    Time: 4487610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 2
+#    Time: 5950110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 3
+#    Time: 7412610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 4
+#    Time: 8875110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 5
+#    Time: 10337610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 6
+#    Time: 11800110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 7
+#    Time: 13262610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 8
+#    Time: 14725110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 9
+#    Time: 16187610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 10
+#    Time: 17650110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 11
+#    Time: 19112610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 12
+#    Time: 20575110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 13
+#    Time: 22037610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 14
+#    Time: 23500110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 15
+#    Time: 24962610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Failure: Simulation done
+#    Time: 24975090 ns  Iteration: 2  Process: /tb_i2c_config/line__320#0 File: ../tb/tb_i2c_config.vhd
+# Break in Architecture testbench at ../tb/tb_i2c_config.vhd line 321
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+vcom -check_synthesis -cover sbf ../vhd/i2c_config.vhd
+# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 13:09:18 on Oct 09,2026
+# vcom -reportprogress 300 -check_synthesis -cover sbf ../vhd/i2c_config.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_config
+# -- Compiling architecture rtl of i2c_config
+# ** Note: (vcom-143) Recognized 2 FSMs in architecture body "i2c_config(rtl)".
+# End time: 13:09:19 on Oct 09,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -cover sbf ../tb/tb_i2c_config.vhd
+# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 13:09:22 on Oct 09,2026
+# vcom -reportprogress 300 -cover sbf ../tb/tb_i2c_config.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_i2c_config
+# -- Compiling architecture testbench of tb_i2c_config
+# -- Loading entity i2c_config
+# ** Note: (vcom-143) Recognized 1 FSM in architecture body "tb_i2c_config(testbench)".
+# End time: 13:09:22 on Oct 09,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -coverage work.tb_i2c_config
+# End time: 13:09:28 on Oct 09,2026, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 0
+# vsim -coverage work.tb_i2c_config 
+# Start time: 13:09:28 on Oct 09,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_i2c_config(testbench)
+# Loading work.i2c_config(rtl)
+run -all
+# ** Note: NACK after byte 0
+#    Time: 475110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: NACK after byte 1
+#    Time: 1487610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: NACK after byte 2
+#    Time: 2950110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 1
+#    Time: 4487610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 2
+#    Time: 5950110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 3
+#    Time: 7412610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 4
+#    Time: 8875110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 5
+#    Time: 10337610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 6
+#    Time: 11800110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 7
+#    Time: 13262610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 8
+#    Time: 14725110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 9
+#    Time: 16187610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 10
+#    Time: 17650110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 11
+#    Time: 19112610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 12
+#    Time: 20575110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 13
+#    Time: 22037610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 14
+#    Time: 23500110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 15
+#    Time: 24962610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Failure: Simulation done
+#    Time: 24975090 ns  Iteration: 2  Process: /tb_i2c_config/line__317#0 File: ../tb/tb_i2c_config.vhd
+# Break in Architecture testbench at ../tb/tb_i2c_config.vhd line 318
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+vcom -check_synthesis -cover sbf ../vhd/i2c_config.vhd
+# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 13:11:25 on Oct 09,2026
+# vcom -reportprogress 300 -check_synthesis -cover sbf ../vhd/i2c_config.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_config
+# -- Compiling architecture rtl of i2c_config
+# ** Note: (vcom-143) Recognized 2 FSMs in architecture body "i2c_config(rtl)".
+# End time: 13:11:29 on Oct 09,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+vcom -cover sbf ../tb/tb_i2c_config.vhd
+# Model Technology ModelSim DE-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 13:11:33 on Oct 09,2026
+# vcom -reportprogress 300 -cover sbf ../tb/tb_i2c_config.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_i2c_config
+# -- Compiling architecture testbench of tb_i2c_config
+# -- Loading entity i2c_config
+# ** Note: (vcom-143) Recognized 1 FSM in architecture body "tb_i2c_config(testbench)".
+# End time: 13:11:34 on Oct 09,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -coverage work.tb_i2c_config
+# End time: 13:11:40 on Oct 09,2026, Elapsed time: 0:02:12
+# Errors: 0, Warnings: 0
+# vsim -coverage work.tb_i2c_config 
+# Start time: 13:11:41 on Oct 09,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_i2c_config(testbench)
+# Loading work.i2c_config(rtl)
+run -all
+# ** Note: NACK after byte 0
+#    Time: 475110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: NACK after byte 1
+#    Time: 1487610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: NACK after byte 2
+#    Time: 2950110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 1
+#    Time: 4487610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 2
+#    Time: 5950110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 3
+#    Time: 7412610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 4
+#    Time: 8875110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 5
+#    Time: 10337610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 6
+#    Time: 11800110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 7
+#    Time: 13262610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 8
+#    Time: 14725110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 9
+#    Time: 16187610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 10
+#    Time: 17650110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 11
+#    Time: 19112610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 12
+#    Time: 20575110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 13
+#    Time: 22037610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 14
+#    Time: 23500110 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Note: Received parameter 15
+#    Time: 24962610 ns  Iteration: 0  Instance: /tb_i2c_config
+# ** Failure: Simulation done
+#    Time: 24975090 ns  Iteration: 2  Process: /tb_i2c_config/line__313#0 File: ../tb/tb_i2c_config.vhd
+# Break in Architecture testbench at ../tb/tb_i2c_config.vhd line 314
+# End time: 13:12:07 on Oct 09,2026, Elapsed time: 0:00:26
 # Errors: 1, Warnings: 0

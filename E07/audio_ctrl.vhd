@@ -84,7 +84,7 @@ begin
             lrclk_r <= '0'; 
             data_r       <= (others => '0'); 
             right_data_r <= (others => '0'); 
-        else if rising_edge(clk) then 
+        elsif rising_edge(clk) then 
  
                 -- Wait for BCLK half-period to elapse
                 if bclk_counter_r = bclk_half_period_c - 1 then 

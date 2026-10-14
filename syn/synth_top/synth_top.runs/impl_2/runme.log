@@ -1,0 +1,81 @@
+
+*** Running vivado
+    with args -log system_top_level_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source system_top_level_wrapper.tcl -notrace
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source system_top_level_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Apps/Xilinx_Vivado2017/Vivado/2017.2/data/ip'.
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 293.012 ; gain = 12.098
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 185 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Runs 36-115] Could not delete directory 'P:/7/syn/synth_top/synth_top.runs/impl_2/.Xil/Vivado-5732-HTC219-321-SPC/dcp11'.
+Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_board.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+Finished Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_board.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1087.656 ; gain = 510.430
+Finished Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+Parsing XDC File [P:/7/xdc/synth.xdc]
+Finished Parsing XDC File [P:/7/xdc/synth.xdc]
+Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_late.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+Finished Parsing XDC File [p:/7/syn/synth_top/synth_top.srcs/sources_1/bd/system_top_level/ip/system_top_level_clk_wiz_0_0/system_top_level_clk_wiz_0_0_late.xdc] for cell 'system_top_level_i/clk_wiz_0/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1100.246 ; gain = 807.234
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020-clg400'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020-clg400'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.256 . Memory (MB): peak = 1100.246 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-318] Generating core instance : dbg_hub
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+ERROR: [Project 1-202] Error writing the XML file 'p:/7/syn/synth_top/synth_top.runs/impl_2/.Xil/Vivado-5732-HTC219-321-SPC/dbg_hub_CV.0/run/prj_ip_0.xpr'
+ERROR: [IP_Flow-19-3805] Failed to generate and synthesize debug IP xilinx.com:ip:xsdbm:3.0. 
+ ERROR: [Common 17-69] Command failed: ERROR: [Project 1-202] Error writing the XML file 'p:/7/syn/synth_top/synth_top.runs/impl_2/.Xil/Vivado-5732-HTC219-321-SPC/dbg_hub_CV.0/run/prj_ip_0.xpr'
+
+ERROR: [Chipscope 16-301] Could not generate core for dbg_hub .Aborting IP Generation operation. 
+	ERROR: [Chipscope 16-218] An error occurred while trying to create or get a cached instance from the IP cache manager:
+	"IP generation failed.
+"
+
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 1d6e786f4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1100.246 ; gain = 0.000
+20 Infos, 1 Warnings, 0 Critical Warnings and 4 Errors encountered.
+opt_design failed
+ERROR: [Chipscope 16-307] Implementing debug core dbg_hub failed due to earlier errors.
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 11:48:36 2026...
+
+*** Running vivado
+    with args -log system_top_level_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source system_top_level_wrapper.tcl -notrace
+

@@ -1,0 +1,95 @@
+Found bugs and fixes 
+
+  
+
+1. Vivado debug core / implementation failure 
+
+  
+
+After adding ILA debug signals, implementation failed even when only one debug probe was used. The errors were related to the debug hub and debug core generation. Reducing the number of probes did not solve the problem. 
+
+  
+
+The problem was fixed by closing Vivado and clearing the generated project cache. After reopening the project, synthesis and the debug setup were recreated and implementation was run again. After the old cached/generated files were removed, Vivado was able to generate the debug core correctly. 
+
+So delete:  
+
+synth_top.cache 
+
+synth_top.runs.impl 
+
+  
+
+This bug was quite difficult to find because synthesis itself worked and the selected debug signals were valid. The error looked like it could be caused by the ILA configuration or the FSM, but the actual problem was stale or corrupted generated Vivado files. 
+
+  
+
+This problem could be avoided by cleaning old debug constraints and generated cache files when recreating the ILA setup. It is also useful to reset implementation after changing debug probes. If Vivado starts giving unusual debug hub errors, recreating generated files or the project can be faster than repeatedly changing the VHDL design.  
+
+  
+
+2. Debug signal selection and clock counter 
+
+  
+
+The I2C clock counter had several synthesized register nets and Vivado did not expose every counter bit in the same way. For the ILA capture condition, wait_count_r_reg[8] was selected because the exercise recommends using a higher clock-counter bit to reduce the sampling frequency. 
+
+  
+
+Only the required counter bit was used instead of adding many duplicated or unnecessary synthesized nets. This simplified the ILA setup and made the waveform easier to capture. 
+
+  
+
+This was moderately difficult because the synthesized signal names were different from the original VHDL signal names and some registers appeared several times in the netlist. 
+
+  
+
+This can be avoided by checking the synthesis hierarchy carefully and selecting only the registers belonging to the i2c_config instance. 
+
+  
+
+ModelSim and ILA 
+
+  
+
+ModelSim should mainly be used before programming the FPGA. It is useful for checking the logical behaviour of the VHDL design, state-machine transitions, counters, I2C byte values and ACK/NACK behaviour. It is easy to control the inputs in a testbench and it is possible to inspect almost every internal signal. 
+
+  
+
+The main advantage of ModelSim is that debugging is very controlled and repeatable. It is also possible to use assertions and test unusual cases that may be difficult to create on the real hardware. The disadvantage is that the simulation does not completely represent the real FPGA board, physical pins, timing, external devices or hardware connections. 
+
+  
+
+ILA should be used when the design has already been synthesized and programmed to the FPGA and the behaviour of the real hardware needs to be observed. It is especially useful for checking whether the I2C controller behaves correctly with the real audio codec and whether the synthesized FSM behaves as expected. 
+
+  
+
+The advantage of ILA is that it shows signals from the real implemented FPGA while the system is running. This makes it possible to find problems that may not appear in simulation. The disadvantages are that only selected signals can be observed, adding or changing debug signals requires implementation again, and the amount of captured data is limited by FPGA memory. Implementation also takes much longer when the debug cores are included. 
+
+  
+
+In practice, ModelSim is better for finding logic and functional bugs, while ILA is better for finding problems that only appear in the real FPGA implementation. 
+
+  
+
+Opinion of the project 
+
+  
+
+The project was useful because it combined VHDL design, simulation, synthesis, FPGA implementation and hardware debugging. It also showed the difference between a design that works in simulation and a design that works on the real FPGA board. 
+
+  
+
+The most difficult part was not always the VHDL itself, but working with Vivado. For example, the ILA implementation problem was caused by old generated/cache files instead of the actual design. This made debugging confusing because the errors did not clearly point to the real cause. 
+
+ 
+
+Also, sometimes the deadlines were a bit too short making the learning process more hard. 
+
+  
+
+One improvement would be to give more guidance about common Vivado project problems, such as stale caches, debug-core errors, generated output products and when runs should be reset. A short troubleshooting section for these problems would save a lot of time. 
+
+  
+
+Overall, after solving the implementation and debug problems, the project became much easier to understand. It was sometimes frustrating because of Vivado, but it was useful to see the complete workflow from VHDL simulation to debugging the actual FPGA hardware. 

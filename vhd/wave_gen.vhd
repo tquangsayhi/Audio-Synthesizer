@@ -1,17 +1,16 @@
 -------------------------------------------------------------------------------
--- Title      : COMP.CE.240, Bonus Exercise 02
--- Project    : Sine Wave Generator
+-- Title      : COMP.CE.240, Exercise 05
+-- Project    : Triangular Wave Generator
 -------------------------------------------------------------------------------
 -- File       : wave_gen.vhd
 -- Author     : Quang Le, Tatu Nyberg
 -- Company    : TAU
--- Edited     : 2026-09-28
+-- Edited     : 2026-09-09
 -- Platform   : 
 -- Standard   : VHDL'87
 -------------------------------------------------------------------------------
--- Description: Synthesizable sine wave generator using the Semi-implicit 
---              Euler method. Replaces the linear 
---              triangle wave with a digital harmonic oscillator.
+-- Description: Implementing a parameterizable triangular wave generator 
+--              using a bidirectional step counter.
 -------------------------------------------------------------------------------
 -- Copyright (c) 2026
 -------------------------------------------------------------------------------
@@ -19,75 +18,86 @@
 -- Date        Version  Author  Description
 
 -------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity wave_gen is
     generic (
+        -- Defines the bit width of the output signal
         width_g : INTEGER;
+        -- Defines the step size for each clock cycle increment/decrement
         step_g  : INTEGER
     );
+
     port (
-        clk             : IN  STD_LOGIC;
-        rst_n           : IN  STD_LOGIC;
-        sync_clear_n_in : IN  STD_LOGIC;
-        value_out       : OUT STD_LOGIC_VECTOR(width_g - 1 downto 0)
+        clk             : IN STD_LOGIC;  -- System clock
+        rst_n           : IN STD_LOGIC;  -- Active-low asynchronous reset
+        sync_clear_n_in : IN STD_LOGIC;  -- Active-low synchronous clear signal
+        value_out       : OUT STD_LOGIC_VECTOR(width_g - 1 DOWNTO 0)
     );
 end wave_gen;
 
-architecture sine_generator of wave_gen is
-    
-    -- Divisor to scale the integer math. A power of 2 (256) ensures the 
-    -- synthesizer optimizes the division into a zero-cost arithmetic right-shift.
-    constant scale_factor : integer := 256; 
-    
-    -- Maximum positive amplitude for an N-bit signed integer (Amplitude = 1)
-    constant max_val_c : integer := ((2**(width_g - 1) - 1) * 7) / 8;
-    
-    -- Sine (s) and Cosine (c) registers
-    signal s : signed(width_g - 1 downto 0) := (others => '0');
-    signal c : signed(width_g - 1 downto 0) := to_signed(max_val_c, width_g);
-    
-    -- Intermediate combinational signal to hold the calculated next sine value
-    signal s_next : signed(width_g - 1 downto 0);
+architecture functionality of wave_gen is
 
-    constant step_s : signed(width_g - 1 downto 0) := to_signed(step_g, width_g);
-
+    -- Tracks the current counting direction ('1' for counting up, '0' for counting down)
+    signal direction : STD_LOGIC := '1';
+    
+    -- Internal signed counter. It is sized to match width_g and initialized to zero.
+    signal out_value : signed(width_g - 1 downto 0) := (others => '0');
+    
+    -- Calculate the exact peak values. 
+    -- VHDL integer division automatically rounds downwards (floors) the result, 
+    -- which ensures the counter will land exactly on these limits without overflowing.
+    constant max_val_c : integer := ((2**(width_g - 1) - 1) / step_g) * step_g;
+    constant min_val_c : integer := -max_val_c;
+    
 begin
 
-    -- Combinational logic for the new Sine value.
-    -- We use the resize() function to ensure VHDL's strict typing allows the 
-    -- multiplied and divided integer to fit back into the width_g register.
-
-    s_next <= s + resize((c * step_s) / scale_factor, width_g);
-
-    -- Synchronous Register Updates
+    -- Synchronous process for handling the bidirectional counting
     process(clk, rst_n)
     begin
+        -- Asynchronous reset: Immediately resets the counter and sets direction to upwards
         if rst_n = '0' then
-            -- Asynchronous Reset: Phase 0 (Sine = 0, Cosine = Max)
-            s <= (others => '0');
-            c <= to_signed(max_val_c, width_g);
+            direction <= '1';
+            out_value <= (others => '0');
             
-        elsif rising_edge(clk) then 
+        -- Synchronous actions occur on the rising edge of the clock
+        elsif clk'event and clk = '1' then
             
-            if sync_clear_n_in = '0' then 
-                -- Synchronous Clear from Push Buttons
-                s <= (others => '0');
-                c <= to_signed(max_val_c, width_g);
-            else 
-                -- Update sine register
-                s <= s_next;
+            -- Synchronous clear: Forces output to 0 and resets direction to upwards 
+            -- without needing to be in the process sensitivity list
+            if sync_clear_n_in = '0' then
+                direction <= '1';
+                out_value <= (others => '0');
+            else
                 
-                -- Update cosine register using the newly calculated s_next
-                c <= c - resize((s_next * step_s) / scale_factor, width_g);
+                -- Counting Upwards Logic
+                if direction = '1' then
+                    -- Using exact equality (=) saves hardware area compared to relative (>=) checks
+                    if (out_value = max_val_c) then
+                        direction <= '0';                -- Reached the peak, turn around
+                        out_value <= out_value - step_g; -- Start stepping down
+                    else
+                        out_value <= out_value + step_g; -- Continue stepping up
+                    end if;
+                    
+                -- Counting Downwards Logic
+                else
+                    if (out_value = min_val_c) then
+                        direction <= '1';                -- Reached the trough, turn around
+                        out_value <= out_value + step_g; -- Start stepping up
+                    else
+                        out_value <= out_value - step_g; -- Continue stepping down
+                    end if;
+                end if;
+                
             end if;
-            
         end if;
     end process;
     
-    -- Route the stabilized sine wave to the output port
-    value_out <= std_logic_vector(resize(s, width_g));
-
-end sine_generator;
+    -- Concurrent assignment to cast the internal signed counter to the STD_LOGIC_VECTOR output port
+    value_out <= std_logic_vector(out_value);
+    
+end functionality;

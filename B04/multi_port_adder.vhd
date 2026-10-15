@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
--- Title      : COMP.CE.240, Exercise 02 (or 03/04 depending on your progress)
+-- Title      : COMP.CE.240, Exercise Bonus 4 
 -- Project    : 
 -------------------------------------------------------------------------------
 -- File       : multi_port_adder.vhd
 -- Author     : Quang Le, Tatu Nyberg
 -- Company    : TAU
--- Edited     : 2026-09-9
+-- Edited     : 2026-10-15
 -- Platform   : 
 -- Standard   : VHDL'87
 -------------------------------------------------------------------------------
--- Description: Implementing a multi-port adder that sums four parameterizable 
---              input values using a structural tree of 2-input adders.
+-- Description: Implementing a multi-port adder that has its overflow corrected.
+-- THE ONLY LINE CHANGED WAS LINE 115
 -------------------------------------------------------------------------------
 -- Copyright (c) 2026
 -------------------------------------------------------------------------------
@@ -110,6 +110,8 @@ begin
         -- Output is now original width + 2 bits
         sum_out => total
     );
+    -- The only line that was changed
+    -- Scale the full sum by 4 so four waves fit in the output width.
     sum_out <= total(operand_width_g + 1 DOWNTO 2);
 
     -- Design constraint check: This structural code hardcodes exactly three adders 

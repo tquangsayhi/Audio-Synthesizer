@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Simulation outputs
+work/
+transcript
+*.wlf
+*.vcd
+*.fst
+vsim.wlf
+
+# Synthesis and build outputs
+*.jou
+*.log
+*.rpt
+*.dcp
+*.bit
+*.bin
+
+# Vivado generated data
+.Xil/
+*.cache/
+*.runs/
+*.sim/
+*.gen/
+
+# ModelSim generated files
+modelsim.ini
